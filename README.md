@@ -15,8 +15,16 @@ $ cd api_pagamento
 # Instale as dependências
 $ npm install
 
+```
+npm install 
+```
+
 # Execute a aplicação em modo de desenvolvimento
 $ nodemon
+
+```
+nodemon
+```
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000> 
 
