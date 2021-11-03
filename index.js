@@ -1,11 +1,12 @@
-const express = require("express");
-const app = express();
-
-app.get("/", function(req, res){
-    //res.send("API ZM Pay")
-    res.sendFile(__dirname + "/html/")
+require('dotenv').config({ 
+    path: process.env.NODE_ENV === "dev" ? ".env.development" : ".env"
 })
 
-app.listen("3000", function(){
-    console.log("SERVIDOR Rodando Porta 3000")
-});
+const http = require('http');
+const app = require('./app')
+const port = process.env.PORT || 3000
+
+const server = http.createServer(app);
+
+server.listen(port);
+
