@@ -4,7 +4,7 @@ var md5 = require('md5');
 var jwt = require('jsonwebtoken');
 
 const Usuario = require('../models/usuario')
-const Empresa = require('../models/empresa')
+const Empresa = require('../models/clube')
 
 router.post("/", ((req, res, next) => {
     var senha = md5(req.body.senha) //Criptografar a senha

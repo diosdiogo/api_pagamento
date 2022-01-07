@@ -2,38 +2,25 @@ const mongoose = require("mongoose")
 
 const Schema = mongoose.Schema; 
 
-const Usuario = new Schema({
-    id: {
-        type: Schema.ObjectId,
+const ListaTelefone = new Schema({
+    _id: {
+        type:  UniqueId,
         autoIncrement: true,
         primaryKey: true,
         unique: true,
         allowNull: false
     },
-    nome: {
-        type: String,
-        require: true
-    },
-    idade: {
-        type: Number
-    },
-    endereco: {
-        type: String,
-    },
-    numero: {
+    clube:{
         type: String
     },
-    CEP : {
-        type: String,
-    },
-    cidade: {
-        type: String,
-    },
-    uf:{
+    telefone:{
         type: String
     },
-    liberadoAte: {
-        type:Date
+    tipoContato: {
+        type: String
+    },
+    contato:{
+        type: String
     },
     createdAt: {
         allowNull: false,
@@ -44,9 +31,10 @@ const Usuario = new Schema({
         type: Date
     },
     deleteAt:{
+        allowNull: false,
         type: Date
     }
 })
 
 //collection
-mongoose.model("usuarios", Usuario) 
+mongoose.model("listaTelefone", ListaTelefone) 

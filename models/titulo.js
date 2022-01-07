@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 
-const Schema = mongoose.Schema; 
+const Schema = mongoose.Schema;
 
-const Usuario = new Schema({
+const Titulo = new Schema({
     id: {
         type: Schema.ObjectId,
         autoIncrement: true,
@@ -14,26 +14,11 @@ const Usuario = new Schema({
         type: String,
         require: true
     },
-    idade: {
-        type: Number
+    valor: {
+        type: Number,
     },
-    endereco: {
-        type: String,
-    },
-    numero: {
-        type: String
-    },
-    CEP : {
-        type: String,
-    },
-    cidade: {
-        type: String,
-    },
-    uf:{
-        type: String
-    },
-    liberadoAte: {
-        type:Date
+    ativo: {
+        type: Boolean
     },
     createdAt: {
         allowNull: false,
@@ -42,11 +27,8 @@ const Usuario = new Schema({
     updatedAt: {
         allowNull: false,
         type: Date
-    },
-    deleteAt:{
-        type: Date
     }
 })
 
 //collection
-mongoose.model("usuarios", Usuario) 
+mongoose.model("titulos", Titulo)

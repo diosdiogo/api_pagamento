@@ -34,6 +34,7 @@ npm install
 npx sequelize-cli db:migrate
 ```
 
+npx sequelize-cli migration:generate --name name
 
 # Execute a aplicação em modo de desenvolvimento
 $ NODE_ENV=dev nodemon
@@ -62,7 +63,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 - [sequelize-cli] (https://www.npmjs.com/package/sequelize-cli)
 - [handlebars] (https://handlebarsjs.com/)
 - [body-parser] (https://www.npmjs.com/package/body-parser)
-- [MSQL](https://www.npmjs.com/package/mysql)
+- [MONGOSE]()
 
 
 
@@ -74,6 +75,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ### Features
 
+- [x] Cadastro clube
 - [x] Login de usuario
-- [x] Cadastro empresa
-- [ ] Lista de apresa
+- [X] Cadastro de aplicação para consumir API
+- [ ] Lista de usuario
